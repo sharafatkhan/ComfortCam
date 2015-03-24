@@ -31,6 +31,9 @@
 #pragma mark -
 #pragma mark Application lifecycle
 NSUncaughtExceptionHandler* _uncaughtExceptionHandler = nil;
+
+
+
 void UncaughtExceptionHandler(NSException *exception) {
     NSLog(@"CRASH: %@", exception);
     NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
@@ -238,30 +241,7 @@ void UncaughtExceptionHandler(NSException *exception) {
 //    [self performSelectorOnMainThread:@selector(switchView:) withObject:nil waitUntilDone:NO];
 }
 
-- (void)addLoginView
-{
-    
-    if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPhone)
-    {
-        loginViewCntrl = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-        
-    }else{
-        loginViewCntrl = [[LoginViewController alloc] initWithNibName:@"LoginViewController_IPad" bundle:nil];
-    }
-    
-    nav = [[UINavigationController alloc] initWithRootViewController:loginViewCntrl];
-    
-    NSLog(@"switchView...===========================");
-    
-    if ([self.startViewController.view isDescendantOfView:self.window])
-    {
-        [self.startViewController.view removeFromSuperview];
-    }
-    
-    //    [self deleteBizCameraFromLocal];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO];
-    [self.window addSubview:nav.view];
-}
+
 
 -(NSString *)serverFilePath{
     NSArray *path=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask
@@ -945,6 +925,91 @@ void UncaughtExceptionHandler(NSException *exception) {
         return NO;
     }
 }
+
+// Code Begin
+
++(IpCameraClientAppDelegate *)sharedAppDelegate
+{
+    return  (IpCameraClientAppDelegate*)[[UIApplication sharedApplication] delegate];
+}
+
+- (void)addLoginView
+{
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPhone)
+    {
+        loginViewCntrl = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+        
+    }else{
+        loginViewCntrl = [[LoginViewController alloc] initWithNibName:@"LoginViewController_IPad" bundle:nil];
+    }
+    
+    nav = [[UINavigationController alloc] initWithRootViewController:loginViewCntrl];
+    
+    NSLog(@"switchView...===========================");
+    
+    if ([self.startViewController.view isDescendantOfView:self.window])
+    {
+        [self.startViewController.view removeFromSuperview];
+    }
+    
+    //    [self deleteBizCameraFromLocal];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [self.window addSubview:nav.view];
+}
+
+#pragma mark -  Loading view methods
+
+-(void) showLoadingView {
+    //NSLog(@"show loading view called");
+    if (loadingView == nil)
+    {
+        CGRect mainScreen=[UIScreen mainScreen].bounds;
+        loadingView = [[UIView alloc] initWithFrame:mainScreen];
+        loadingView.opaque = NO;
+        loadingView.backgroundColor = [UIColor darkGrayColor];
+        loadingView.alpha = 0.5;
+        
+        UIView *subloadview=[[UIView alloc] initWithFrame:CGRectMake(84.0, 190.0,150.0 ,50.0)];
+        subloadview.backgroundColor=[UIColor blackColor];
+        subloadview.opaque=NO;
+        subloadview.alpha=0.8;
+        
+        subloadview.layer.masksToBounds = YES;
+        subloadview.layer.cornerRadius = 6.0;
+        
+        lblLoad=[[UILabel alloc]initWithFrame:CGRectMake(50.0, 7.0,80.0, 33.0)];
+        lblLoad.text=@"LoadingView";
+        lblLoad.backgroundColor=[UIColor clearColor];
+        lblLoad.textColor=[UIColor whiteColor];
+        [subloadview addSubview:lblLoad];
+        
+        UIActivityIndicatorView *spinningWheel = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(10.0, 11.0, 25.0, 25.0)];
+        [spinningWheel startAnimating];
+        spinningWheel.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+        [subloadview addSubview:spinningWheel];
+        [loadingView addSubview:subloadview];
+        
+        subloadview.center = loadingView.center;
+        
+        [spinningWheel release];
+    }
+    [self.window addSubview:loadingView];
+    
+    //[[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert];
+}
+
+
+-(void) hideLoadingView {
+    if (loadingView) {
+        [loadingView removeFromSuperview];
+        [loadingView release];
+        loadingView = nil;
+    }
+    
+}
+
+// Code Ends
 
 
 @end

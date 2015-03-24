@@ -345,7 +345,7 @@
 		C720E4FE1AC188F800A7E1F4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E4DE1AC188F800A7E1F4 /* LoginViewController.m */; };
 		C720E4FF1AC188F800A7E1F4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4DF1AC188F800A7E1F4 /* LoginViewController.xib */; };
 		C720E5001AC188F800A7E1F4 /* LoginViewController_IPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4E01AC188F800A7E1F4 /* LoginViewController_IPad.xib */; };
-		C720E5011AC188F800A7E1F4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E4E11AC188F800A7E1F4 /* logo.png */; };
+		C720E5011AC188F800A7E1F4 /* CClogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E4E11AC188F800A7E1F4 /* CClogo.png */; };
 		C720E5161AC189B700A7E1F4 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E5151AC189B700A7E1F4 /* RegisterViewController.m */; };
 		C720E5191AC189EB00A7E1F4 /* RegisterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E5171AC189EB00A7E1F4 /* RegisterViewController_iPad.xib */; };
 		C720E51A1AC189EB00A7E1F4 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E5181AC189EB00A7E1F4 /* RegisterViewController.xib */; };
@@ -357,6 +357,13 @@
 		C720E52C1AC18A4D00A7E1F4 /* SubscriptionViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E5281AC18A4D00A7E1F4 /* SubscriptionViewController_iPad.xib */; };
 		C720E52D1AC18A4D00A7E1F4 /* SubscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E52A1AC18A4D00A7E1F4 /* SubscriptionViewController.m */; };
 		C720E52E1AC18A4D00A7E1F4 /* SubscriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E52B1AC18A4D00A7E1F4 /* SubscriptionViewController.xib */; };
+		C720E5301AC1A67300A7E1F4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C720E52F1AC1A67300A7E1F4 /* StoreKit.framework */; };
+		C720E5341AC1A75E00A7E1F4 /* uncheck.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E5311AC1A75E00A7E1F4 /* uncheck.png */; };
+		C720E5351AC1A75E00A7E1F4 /* uncheck@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E5321AC1A75E00A7E1F4 /* uncheck@2x.png */; };
+		C720E5361AC1A75E00A7E1F4 /* uncheck@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E5331AC1A75E00A7E1F4 /* uncheck@3x.png */; };
+		C720E53A1AC1A7BE00A7E1F4 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E5371AC1A7BE00A7E1F4 /* check.png */; };
+		C720E53B1AC1A7BE00A7E1F4 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E5381AC1A7BE00A7E1F4 /* check@2x.png */; };
+		C720E53C1AC1A7BE00A7E1F4 /* check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E5391AC1A7BE00A7E1F4 /* check@3x.png */; };
 		CC31F0201547E2CD000FE8BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC31F01F1547E2CD000FE8BD /* libsqlite3.dylib */; };
 		CC85610C155130F000C15A0C /* IpCameraClient.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC85610B155130F000C15A0C /* IpCameraClient.strings */; };
 		CC87C459154924E60086B180 /* SearchListCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC87C458154924E60086B180 /* SearchListCell.mm */; };
@@ -894,7 +901,7 @@
 		C720E4DE1AC188F800A7E1F4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C720E4DF1AC188F800A7E1F4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C720E4E01AC188F800A7E1F4 /* LoginViewController_IPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController_IPad.xib; sourceTree = "<group>"; };
-		C720E4E11AC188F800A7E1F4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		C720E4E11AC188F800A7E1F4 /* CClogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CClogo.png; sourceTree = "<group>"; };
 		C720E50E1AC1898900A7E1F4 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		C720E5151AC189B700A7E1F4 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		C720E5171AC189EB00A7E1F4 /* RegisterViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController_iPad.xib; sourceTree = "<group>"; };
@@ -909,6 +916,13 @@
 		C720E5291AC18A4D00A7E1F4 /* SubscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionViewController.h; sourceTree = "<group>"; };
 		C720E52A1AC18A4D00A7E1F4 /* SubscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionViewController.m; sourceTree = "<group>"; };
 		C720E52B1AC18A4D00A7E1F4 /* SubscriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionViewController.xib; sourceTree = "<group>"; };
+		C720E52F1AC1A67300A7E1F4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C720E5311AC1A75E00A7E1F4 /* uncheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uncheck.png; sourceTree = "<group>"; };
+		C720E5321AC1A75E00A7E1F4 /* uncheck@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uncheck@2x.png"; sourceTree = "<group>"; };
+		C720E5331AC1A75E00A7E1F4 /* uncheck@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uncheck@3x.png"; sourceTree = "<group>"; };
+		C720E5371AC1A7BE00A7E1F4 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		C720E5381AC1A7BE00A7E1F4 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		C720E5391AC1A7BE00A7E1F4 /* check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@3x.png"; sourceTree = "<group>"; };
 		CC31F01F1547E2CD000FE8BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CC31F0651547EF18000FE8BD /* DBSelectResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSelectResultProtocol.h; sourceTree = "<group>"; };
 		CC85610215512FF100C15A0C /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/IpCameraClient.strings; sourceTree = "<group>"; };
@@ -952,6 +966,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C720E5301AC1A67300A7E1F4 /* StoreKit.framework in Frameworks */,
 				B704264B1AB6A833000A8437 /* libswresample.a in Frameworks */,
 				B743DA9D1A70F8ED00F0D42B /* SystemConfiguration.framework in Frameworks */,
 				B76185D516B92CC0000A7205 /* libbz2.dylib in Frameworks */,
@@ -1372,6 +1387,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C720E52F1AC1A67300A7E1F4 /* StoreKit.framework */,
 				B704263A1AB6A833000A8437 /* libPPPP_API.a */,
 				B704263B1AB6A833000A8437 /* libBiz_API.a */,
 				B704263C1AB6A833000A8437 /* libavcodec.a */,
@@ -1749,7 +1765,7 @@
 				C720E4D41AC188F800A7E1F4 /* InAppAlertView */,
 				C720E4D91AC188F800A7E1F4 /* InAppPurchaseManager */,
 				C720E4DC1AC188F800A7E1F4 /* Login */,
-				C720E4E11AC188F800A7E1F4 /* logo.png */,
+				C720E4E11AC188F800A7E1F4 /* CClogo.png */,
 			);
 			path = SignUpProcess;
 			sourceTree = "<group>";
@@ -1799,6 +1815,12 @@
 		C720E4DC1AC188F800A7E1F4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C720E5371AC1A7BE00A7E1F4 /* check.png */,
+				C720E5381AC1A7BE00A7E1F4 /* check@2x.png */,
+				C720E5391AC1A7BE00A7E1F4 /* check@3x.png */,
+				C720E5311AC1A75E00A7E1F4 /* uncheck.png */,
+				C720E5321AC1A75E00A7E1F4 /* uncheck@2x.png */,
+				C720E5331AC1A75E00A7E1F4 /* uncheck@3x.png */,
 				C720E4DD1AC188F800A7E1F4 /* LoginViewController.h */,
 				C720E4DE1AC188F800A7E1F4 /* LoginViewController.m */,
 				C720E4DF1AC188F800A7E1F4 /* LoginViewController.xib */,
@@ -1978,6 +2000,7 @@
 				04AFA78A1639478600FA3FD3 /* AlarmController.xib in Resources */,
 				B70426B21AB6A939000A8437 /* topbar_icon_light_on.png in Resources */,
 				04B9B15C163A297F00349F4E /* oLableCell.xib in Resources */,
+				C720E53B1AC1A7BE00A7E1F4 /* check@2x.png in Resources */,
 				B7FF0BBC1939C7760011FD25 /* playright.png in Resources */,
 				04B9B161163A345D00349F4E /* oTextCell.xib in Resources */,
 				04B9B166163A356300349F4E /* oSwitchCell.xib in Resources */,
@@ -2001,6 +2024,8 @@
 				04BAB31E1654956C005B09A5 /* PictureShowViewController.xib in Resources */,
 				B70426A31AB6A939000A8437 /* scan_coremark02.png in Resources */,
 				B726AB8718FBCA0800A0CDAB /* cbx_on.png in Resources */,
+				C720E53A1AC1A7BE00A7E1F4 /* check.png in Resources */,
+				C720E5351AC1A75E00A7E1F4 /* uncheck@2x.png in Resources */,
 				04C0EA8416571F1D00FD88D8 /* picture30.png in Resources */,
 				04C0EA87165721D100FD88D8 /* record30.png in Resources */,
 				B726AB9118FBDA6A00A0CDAB /* gpio_open.png in Resources */,
@@ -2012,7 +2037,7 @@
 				04C0EB15165B346100FD88D8 /* PlaybackViewController.xib in Resources */,
 				04C0EB1C165BA42D00FD88D8 /* PicDirCell.xib in Resources */,
 				04F1BC1B165CB5FA00458C9E /* picbk.png in Resources */,
-				C720E5011AC188F800A7E1F4 /* logo.png in Resources */,
+				C720E5011AC188F800A7E1F4 /* CClogo.png in Resources */,
 				04BC3F7A165DAC5F00B7E832 /* play_video.png in Resources */,
 				04BC3F7B165DAC5F00B7E832 /* videobk.png in Resources */,
 				C720E5241AC189FF00A7E1F4 /* name.png in Resources */,
@@ -2038,6 +2063,7 @@
 				B7D891E2167068780087CE9D /* Shader.fsh in Resources */,
 				B7D1DE30167081C800136437 /* CustomGLView.xib in Resources */,
 				B7D8699A16785BD80057C00F /* FtpSettingViewController.xib in Resources */,
+				C720E53C1AC1A7BE00A7E1F4 /* check@3x.png in Resources */,
 				B70426A41AB6A939000A8437 /* scan_coremark02@2x.png in Resources */,
 				B7FF0BA61939AE6C0011FD25 /* done_pressed.png in Resources */,
 				B7D869A01678A74C0057C00F /* MailSettingViewController.xib in Resources */,
@@ -2082,6 +2108,7 @@
 				B7F0CB7E175F3162006085E4 /* MoreViewController.xib in Resources */,
 				C720E4FC1AC188F800A7E1F4 /* InAppAlertView_iPad.xib in Resources */,
 				C720E4F41AC188F800A7E1F4 /* ChangePasswordViewController_iPad.xib in Resources */,
+				C720E5361AC1A75E00A7E1F4 /* uncheck@3x.png in Resources */,
 				B7FF0BB01939AF4A0011FD25 /* pup.png in Resources */,
 				B7F0CB83175F317E006085E4 /* morelistcell.xib in Resources */,
 				B7D2AE98176022CF004AD177 /* pull.png in Resources */,
@@ -2122,6 +2149,7 @@
 				B7EF64671A13605C00CC0BAC /* icon-152.png in Resources */,
 				B7F00C341803B87200D2B608 /* moreviewback.png in Resources */,
 				C720E5221AC189FF00A7E1F4 /* email.png in Resources */,
+				C720E5341AC1A75E00A7E1F4 /* uncheck.png in Resources */,
 				B7FA873C18CB4512005E3C2D /* zoomadd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

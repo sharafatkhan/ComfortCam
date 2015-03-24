@@ -98,7 +98,11 @@ typedef struct _STU_TM{
 
 
 
-/*  Comment added */
+/*  Code added */
+
+#define kPRODUCT_TYPE_MONTH @"SKU__01"
+#define kPRODUCT_TYPE_YEAR @"SKU_02"
+#define kPRODUCT_PURCHASE @"purchase product"
 
 enum SIGN_UP
 {
@@ -125,7 +129,7 @@ inline static BOOL isEmailValid(NSString *emailString)
     NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern options:NSRegularExpressionCaseInsensitive error:nil];
     NSUInteger regExMatches = [regEx numberOfMatchesInString:emailString options:0 range:NSMakeRange(0, [emailString length])];
     
-    NSLog(@"%i", regExMatches);
+    NSLog(@"%lu", (unsigned long)regExMatches);
     if (regExMatches == 0)
     {
         return NO;

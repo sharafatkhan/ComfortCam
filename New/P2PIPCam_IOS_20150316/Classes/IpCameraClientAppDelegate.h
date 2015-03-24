@@ -72,6 +72,11 @@
     // Code Begin
     LoginViewController *loginViewCntrl;
      UINavigationController *nav;
+    
+    UIView *activityView;
+    UIView *loadingView;
+    UILabel *lblLoad;
+    
     // Code Ends
 }
 
@@ -104,5 +109,17 @@
 
 -(void)enterMoreView:(FourViewController*)vc;
 -(void)playEnterFourView;
+
+// Code Begin
+
+- (void)addLoginView;
+
+// Loading view methods
+
+-(void) showLoadingView;
+-(void) hideLoadingView;
+
++(IpCameraClientAppDelegate *)sharedAppDelegate;
+// Code Ends
 @end
 
