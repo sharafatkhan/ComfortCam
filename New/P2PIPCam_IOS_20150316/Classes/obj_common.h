@@ -96,3 +96,43 @@ typedef struct _STU_TM{
     
 }STRU_TM,*PSTRU_TM;
 
+
+
+/*  Comment added */
+
+enum SIGN_UP
+{
+    FirstName   = 0,
+    LastName    = 1,
+    Email       = 2,
+    Phone       = 3,
+    Password    = 4,
+    ConfirmPass = 5,
+    OldPassword = 6,
+    NewPassword = 7,
+    ConfirmEmail= 8
+}SignUp;
+
+
+inline static BOOL isEmailValid(NSString *emailString)
+{
+    if([emailString length]==0){
+        return NO;
+    }
+    
+    NSString *regExPattern = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    
+    NSRegularExpression *regEx = [[NSRegularExpression alloc] initWithPattern:regExPattern options:NSRegularExpressionCaseInsensitive error:nil];
+    NSUInteger regExMatches = [regEx numberOfMatchesInString:emailString options:0 range:NSMakeRange(0, [emailString length])];
+    
+    NSLog(@"%i", regExMatches);
+    if (regExMatches == 0)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
+    
+}

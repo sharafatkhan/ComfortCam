@@ -209,7 +209,58 @@ void UncaughtExceptionHandler(NSException *exception) {
     st_PPPP_NetInfo NetInfo;
     PPPP_NetworkDetect(&NetInfo, 0);    
     usleep(3000000);
-    [self performSelectorOnMainThread:@selector(switchView:) withObject:nil waitUntilDone:NO];
+    
+    NSString *strUserName = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserName"];
+    NSString *strUserPassword = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserPassword"];
+    
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isLoggedIN"] == YES)
+    {
+        if (strUserName != nil && strUserPassword != nil)
+        {
+            if ([[NSUserDefaults standardUserDefaults] boolForKey:@"rememberME"] == YES)
+            {
+                [self performSelectorOnMainThread:@selector(switchView:) withObject:nil waitUntilDone:NO];
+            }
+            else
+            {
+                [self performSelectorOnMainThread:@selector(addLoginView) withObject:nil waitUntilDone:NO];
+            }
+        }
+        else
+        {
+            [self performSelectorOnMainThread:@selector(addLoginView) withObject:nil waitUntilDone:NO];
+        }
+    }else
+    {
+        [self performSelectorOnMainThread:@selector(addLoginView) withObject:nil waitUntilDone:NO];
+    }
+    
+//    [self performSelectorOnMainThread:@selector(switchView:) withObject:nil waitUntilDone:NO];
+}
+
+- (void)addLoginView
+{
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPhone)
+    {
+        loginViewCntrl = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+        
+    }else{
+        loginViewCntrl = [[LoginViewController alloc] initWithNibName:@"LoginViewController_IPad" bundle:nil];
+    }
+    
+    nav = [[UINavigationController alloc] initWithRootViewController:loginViewCntrl];
+    
+    NSLog(@"switchView...===========================");
+    
+    if ([self.startViewController.view isDescendantOfView:self.window])
+    {
+        [self.startViewController.view removeFromSuperview];
+    }
+    
+    //    [self deleteBizCameraFromLocal];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
+    [self.window addSubview:nav.view];
 }
 
 -(NSString *)serverFilePath{

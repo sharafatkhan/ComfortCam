@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>79FF80F6-235F-497C-9201-FB8D1656C1CE</string>
+	<string>A35FE93B-E7F3-437C-8C36-436404EE25A3</string>
 	<key>IDESourceControlProjectName</key>
 	<string>P2PCamera</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,7 +14,7 @@
 		<string>https://github.com/sharafatkhan/ComfortCam.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Old/P2PIPCam_IOS_2014-1104_AllServer/P2PCamera.xcodeproj</string>
+	<string>New/P2PIPCam_IOS_20150316/P2PCamera.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>80FB7354C9D49E7E194BBFF8F8166743C559863C</key>

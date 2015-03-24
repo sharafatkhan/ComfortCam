@@ -330,6 +330,33 @@
 		B7FF0BBA1939C7760011FD25 /* playdown.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FF0BB71939C7760011FD25 /* playdown.png */; };
 		B7FF0BBB1939C7760011FD25 /* playup.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FF0BB81939C7760011FD25 /* playup.png */; };
 		B7FF0BBC1939C7760011FD25 /* playright.png in Resources */ = {isa = PBXBuildFile; fileRef = B7FF0BB91939C7760011FD25 /* playright.png */; };
+		C720E4F21AC188F800A7E1F4 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E4CA1AC188F800A7E1F4 /* ChangePasswordViewController.m */; };
+		C720E4F31AC188F800A7E1F4 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4CB1AC188F800A7E1F4 /* ChangePasswordViewController.xib */; };
+		C720E4F41AC188F800A7E1F4 /* ChangePasswordViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4CC1AC188F800A7E1F4 /* ChangePasswordViewController_iPad.xib */; };
+		C720E4F51AC188F800A7E1F4 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E4CF1AC188F800A7E1F4 /* ForgotPasswordViewController.m */; };
+		C720E4F61AC188F800A7E1F4 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4D01AC188F800A7E1F4 /* ForgotPasswordViewController.xib */; };
+		C720E4F71AC188F800A7E1F4 /* ForgotPasswordViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4D11AC188F800A7E1F4 /* ForgotPasswordViewController_iPad.xib */; };
+		C720E4F81AC188F800A7E1F4 /* imgButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E4D21AC188F800A7E1F4 /* imgButton.png */; };
+		C720E4F91AC188F800A7E1F4 /* imgTextField.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E4D31AC188F800A7E1F4 /* imgTextField.png */; };
+		C720E4FA1AC188F800A7E1F4 /* InAppAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E4D61AC188F800A7E1F4 /* InAppAlertView.m */; };
+		C720E4FB1AC188F800A7E1F4 /* InAppAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4D71AC188F800A7E1F4 /* InAppAlertView.xib */; };
+		C720E4FC1AC188F800A7E1F4 /* InAppAlertView_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4D81AC188F800A7E1F4 /* InAppAlertView_iPad.xib */; };
+		C720E4FD1AC188F800A7E1F4 /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E4DB1AC188F800A7E1F4 /* IAPHelper.m */; };
+		C720E4FE1AC188F800A7E1F4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E4DE1AC188F800A7E1F4 /* LoginViewController.m */; };
+		C720E4FF1AC188F800A7E1F4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4DF1AC188F800A7E1F4 /* LoginViewController.xib */; };
+		C720E5001AC188F800A7E1F4 /* LoginViewController_IPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E4E01AC188F800A7E1F4 /* LoginViewController_IPad.xib */; };
+		C720E5011AC188F800A7E1F4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E4E11AC188F800A7E1F4 /* logo.png */; };
+		C720E5161AC189B700A7E1F4 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E5151AC189B700A7E1F4 /* RegisterViewController.m */; };
+		C720E5191AC189EB00A7E1F4 /* RegisterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E5171AC189EB00A7E1F4 /* RegisterViewController_iPad.xib */; };
+		C720E51A1AC189EB00A7E1F4 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E5181AC189EB00A7E1F4 /* RegisterViewController.xib */; };
+		C720E5221AC189FF00A7E1F4 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E51C1AC189FF00A7E1F4 /* email.png */; };
+		C720E5231AC189FF00A7E1F4 /* mobile.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E51D1AC189FF00A7E1F4 /* mobile.png */; };
+		C720E5241AC189FF00A7E1F4 /* name.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E51E1AC189FF00A7E1F4 /* name.png */; };
+		C720E5251AC189FF00A7E1F4 /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E51F1AC189FF00A7E1F4 /* password.png */; };
+		C720E5261AC189FF00A7E1F4 /* RequestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E5211AC189FF00A7E1F4 /* RequestClass.m */; };
+		C720E52C1AC18A4D00A7E1F4 /* SubscriptionViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E5281AC18A4D00A7E1F4 /* SubscriptionViewController_iPad.xib */; };
+		C720E52D1AC18A4D00A7E1F4 /* SubscriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C720E52A1AC18A4D00A7E1F4 /* SubscriptionViewController.m */; };
+		C720E52E1AC18A4D00A7E1F4 /* SubscriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C720E52B1AC18A4D00A7E1F4 /* SubscriptionViewController.xib */; };
 		CC31F0201547E2CD000FE8BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC31F01F1547E2CD000FE8BD /* libsqlite3.dylib */; };
 		CC85610C155130F000C15A0C /* IpCameraClient.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC85610B155130F000C15A0C /* IpCameraClient.strings */; };
 		CC87C459154924E60086B180 /* SearchListCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC87C458154924E60086B180 /* SearchListCell.mm */; };
@@ -847,6 +874,41 @@
 		B7FF0BB71939C7760011FD25 /* playdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playdown.png; sourceTree = "<group>"; };
 		B7FF0BB81939C7760011FD25 /* playup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playup.png; sourceTree = "<group>"; };
 		B7FF0BB91939C7760011FD25 /* playright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playright.png; sourceTree = "<group>"; };
+		C720E4C91AC188F800A7E1F4 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		C720E4CA1AC188F800A7E1F4 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		C720E4CB1AC188F800A7E1F4 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		C720E4CC1AC188F800A7E1F4 /* ChangePasswordViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController_iPad.xib; sourceTree = "<group>"; };
+		C720E4CE1AC188F800A7E1F4 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		C720E4CF1AC188F800A7E1F4 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
+		C720E4D01AC188F800A7E1F4 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		C720E4D11AC188F800A7E1F4 /* ForgotPasswordViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController_iPad.xib; sourceTree = "<group>"; };
+		C720E4D21AC188F800A7E1F4 /* imgButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgButton.png; sourceTree = "<group>"; };
+		C720E4D31AC188F800A7E1F4 /* imgTextField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imgTextField.png; sourceTree = "<group>"; };
+		C720E4D51AC188F800A7E1F4 /* InAppAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppAlertView.h; sourceTree = "<group>"; };
+		C720E4D61AC188F800A7E1F4 /* InAppAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppAlertView.m; sourceTree = "<group>"; };
+		C720E4D71AC188F800A7E1F4 /* InAppAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InAppAlertView.xib; sourceTree = "<group>"; };
+		C720E4D81AC188F800A7E1F4 /* InAppAlertView_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InAppAlertView_iPad.xib; sourceTree = "<group>"; };
+		C720E4DA1AC188F800A7E1F4 /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		C720E4DB1AC188F800A7E1F4 /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		C720E4DD1AC188F800A7E1F4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C720E4DE1AC188F800A7E1F4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C720E4DF1AC188F800A7E1F4 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C720E4E01AC188F800A7E1F4 /* LoginViewController_IPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController_IPad.xib; sourceTree = "<group>"; };
+		C720E4E11AC188F800A7E1F4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		C720E50E1AC1898900A7E1F4 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		C720E5151AC189B700A7E1F4 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		C720E5171AC189EB00A7E1F4 /* RegisterViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController_iPad.xib; sourceTree = "<group>"; };
+		C720E5181AC189EB00A7E1F4 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		C720E51C1AC189FF00A7E1F4 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		C720E51D1AC189FF00A7E1F4 /* mobile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mobile.png; sourceTree = "<group>"; };
+		C720E51E1AC189FF00A7E1F4 /* name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = name.png; sourceTree = "<group>"; };
+		C720E51F1AC189FF00A7E1F4 /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		C720E5201AC189FF00A7E1F4 /* RequestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestClass.h; sourceTree = "<group>"; };
+		C720E5211AC189FF00A7E1F4 /* RequestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestClass.m; sourceTree = "<group>"; };
+		C720E5281AC18A4D00A7E1F4 /* SubscriptionViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionViewController_iPad.xib; sourceTree = "<group>"; };
+		C720E5291AC18A4D00A7E1F4 /* SubscriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscriptionViewController.h; sourceTree = "<group>"; };
+		C720E52A1AC18A4D00A7E1F4 /* SubscriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscriptionViewController.m; sourceTree = "<group>"; };
+		C720E52B1AC18A4D00A7E1F4 /* SubscriptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubscriptionViewController.xib; sourceTree = "<group>"; };
 		CC31F01F1547E2CD000FE8BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CC31F0651547EF18000FE8BD /* DBSelectResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSelectResultProtocol.h; sourceTree = "<group>"; };
 		CC85610215512FF100C15A0C /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/IpCameraClient.strings; sourceTree = "<group>"; };
@@ -1156,6 +1218,7 @@
 		04B4030C162E7AF700A2F05D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C720E4C71AC188F800A7E1F4 /* SignUpProcess */,
 				B70426581AB6A939000A8437 /* ScanBarCode */,
 				B70FF71B19541AB200667595 /* Biz */,
 				B75D59B9192B01030048A848 /* Beans */,
@@ -1673,6 +1736,112 @@
 			name = MoreView;
 			sourceTree = "<group>";
 		};
+		C720E4C71AC188F800A7E1F4 /* SignUpProcess */ = {
+			isa = PBXGroup;
+			children = (
+				C720E5271AC18A3000A7E1F4 /* Subscription */,
+				C720E51B1AC189FF00A7E1F4 /* RequestClass */,
+				C720E50D1AC1898900A7E1F4 /* Register */,
+				C720E4C81AC188F800A7E1F4 /* ChangePassword */,
+				C720E4CD1AC188F800A7E1F4 /* ForgotPassword */,
+				C720E4D21AC188F800A7E1F4 /* imgButton.png */,
+				C720E4D31AC188F800A7E1F4 /* imgTextField.png */,
+				C720E4D41AC188F800A7E1F4 /* InAppAlertView */,
+				C720E4D91AC188F800A7E1F4 /* InAppPurchaseManager */,
+				C720E4DC1AC188F800A7E1F4 /* Login */,
+				C720E4E11AC188F800A7E1F4 /* logo.png */,
+			);
+			path = SignUpProcess;
+			sourceTree = "<group>";
+		};
+		C720E4C81AC188F800A7E1F4 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				C720E4C91AC188F800A7E1F4 /* ChangePasswordViewController.h */,
+				C720E4CA1AC188F800A7E1F4 /* ChangePasswordViewController.m */,
+				C720E4CB1AC188F800A7E1F4 /* ChangePasswordViewController.xib */,
+				C720E4CC1AC188F800A7E1F4 /* ChangePasswordViewController_iPad.xib */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		C720E4CD1AC188F800A7E1F4 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				C720E4CE1AC188F800A7E1F4 /* ForgotPasswordViewController.h */,
+				C720E4CF1AC188F800A7E1F4 /* ForgotPasswordViewController.m */,
+				C720E4D01AC188F800A7E1F4 /* ForgotPasswordViewController.xib */,
+				C720E4D11AC188F800A7E1F4 /* ForgotPasswordViewController_iPad.xib */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		C720E4D41AC188F800A7E1F4 /* InAppAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				C720E4D51AC188F800A7E1F4 /* InAppAlertView.h */,
+				C720E4D61AC188F800A7E1F4 /* InAppAlertView.m */,
+				C720E4D71AC188F800A7E1F4 /* InAppAlertView.xib */,
+				C720E4D81AC188F800A7E1F4 /* InAppAlertView_iPad.xib */,
+			);
+			path = InAppAlertView;
+			sourceTree = "<group>";
+		};
+		C720E4D91AC188F800A7E1F4 /* InAppPurchaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				C720E4DA1AC188F800A7E1F4 /* IAPHelper.h */,
+				C720E4DB1AC188F800A7E1F4 /* IAPHelper.m */,
+			);
+			path = InAppPurchaseManager;
+			sourceTree = "<group>";
+		};
+		C720E4DC1AC188F800A7E1F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C720E4DD1AC188F800A7E1F4 /* LoginViewController.h */,
+				C720E4DE1AC188F800A7E1F4 /* LoginViewController.m */,
+				C720E4DF1AC188F800A7E1F4 /* LoginViewController.xib */,
+				C720E4E01AC188F800A7E1F4 /* LoginViewController_IPad.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C720E50D1AC1898900A7E1F4 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				C720E50E1AC1898900A7E1F4 /* RegisterViewController.h */,
+				C720E5151AC189B700A7E1F4 /* RegisterViewController.m */,
+				C720E5171AC189EB00A7E1F4 /* RegisterViewController_iPad.xib */,
+				C720E5181AC189EB00A7E1F4 /* RegisterViewController.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		C720E51B1AC189FF00A7E1F4 /* RequestClass */ = {
+			isa = PBXGroup;
+			children = (
+				C720E51C1AC189FF00A7E1F4 /* email.png */,
+				C720E51D1AC189FF00A7E1F4 /* mobile.png */,
+				C720E51E1AC189FF00A7E1F4 /* name.png */,
+				C720E51F1AC189FF00A7E1F4 /* password.png */,
+				C720E5201AC189FF00A7E1F4 /* RequestClass.h */,
+				C720E5211AC189FF00A7E1F4 /* RequestClass.m */,
+			);
+			path = RequestClass;
+			sourceTree = "<group>";
+		};
+		C720E5271AC18A3000A7E1F4 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				C720E5281AC18A4D00A7E1F4 /* SubscriptionViewController_iPad.xib */,
+				C720E5291AC18A4D00A7E1F4 /* SubscriptionViewController.h */,
+				C720E52A1AC18A4D00A7E1F4 /* SubscriptionViewController.m */,
+				C720E52B1AC18A4D00A7E1F4 /* SubscriptionViewController.xib */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1770,6 +1939,8 @@
 				B73BE33819C419590090756E /* camera_menu.png in Resources */,
 				04F5DB431623F8DA00474C90 /* WifiPwdCell.xib in Resources */,
 				B70FF7291954388100667595 /* AlarmLogsViewController.xib in Resources */,
+				C720E4F91AC188F800A7E1F4 /* imgTextField.png in Resources */,
+				C720E52E1AC18A4D00A7E1F4 /* SubscriptionViewController.xib in Resources */,
 				B7EF64621A13605C00CC0BAC /* icon-72.png in Resources */,
 				0402892F1627B75A007BD608 /* audio.png in Resources */,
 				B762B1EF18FCC23D00817EAB /* ptzdefault.png in Resources */,
@@ -1777,17 +1948,20 @@
 				040289341627B7ED007BD608 /* micro_on.png in Resources */,
 				0402893E1627BBFD007BD608 /* vert_tour.png in Resources */,
 				040289501627D07D007BD608 /* vert_mirror.png in Resources */,
+				C720E4F71AC188F800A7E1F4 /* ForgotPasswordViewController_iPad.xib in Resources */,
 				040289511627D07D007BD608 /* hori_mirror.png in Resources */,
 				B7E1816C19767995003D0CCC /* bottom@2x.png in Resources */,
 				04B631241629678E007B647A /* ptz_playmode_enlarge.png in Resources */,
 				04B631251629678E007B647A /* ptz_playmode_fullscreen.png in Resources */,
 				B726AB8D18FBD0C700A0CDAB /* formatsdcard.png in Resources */,
+				C720E4FF1AC188F800A7E1F4 /* LoginViewController.xib in Resources */,
 				B726AB8C18FBD0C700A0CDAB /* exitbutton.png in Resources */,
 				04B631261629678E007B647A /* ptz_playmode_standard.png in Resources */,
 				B7EF64651A13605C00CC0BAC /* icon-120.png in Resources */,
 				04B63128162967A6007B647A /* ng.png in Resources */,
 				04B40271162C11AF00A2F05D /* AboutViewController.xib in Resources */,
 				04B402F7162D1DBA00A2F05D /* ipcadd30.png in Resources */,
+				C720E5191AC189EB00A7E1F4 /* RegisterViewController_iPad.xib in Resources */,
 				B7FF0BA41939AE6C0011FD25 /* btn_back_pressed.png in Resources */,
 				B7FF0BB21939BB970011FD25 /* playalarm.png in Resources */,
 				04B40301162D2B1000A2F05D /* about.png in Resources */,
@@ -1808,6 +1982,7 @@
 				04B9B161163A345D00349F4E /* oTextCell.xib in Resources */,
 				04B9B166163A356300349F4E /* oSwitchCell.xib in Resources */,
 				04B9B17F163A857400349F4E /* oDropController.xib in Resources */,
+				C720E4FB1AC188F800A7E1F4 /* InAppAlertView.xib in Resources */,
 				04B9B184163A870800349F4E /* oDropListCell.xib in Resources */,
 				04CFD0CB1651CD8100CBC907 /* AddCameraCell.xib in Resources */,
 				B70426BE1AB6A939000A8437 /* zbar-back.png in Resources */,
@@ -1815,17 +1990,21 @@
 				04FE57841652360400D48E04 /* PictureViewController.xib in Resources */,
 				B7FA873B18CB4512005E3C2D /* zoom.png in Resources */,
 				B726AB8918FBCE2200A0CDAB /* waves.png in Resources */,
+				C720E5001AC188F800A7E1F4 /* LoginViewController_IPad.xib in Resources */,
 				04FE57891652362100D48E04 /* RecordViewController.xib in Resources */,
+				C720E4F81AC188F800A7E1F4 /* imgButton.png in Resources */,
 				B726AB8618FBCA0800A0CDAB /* cbx_off.png in Resources */,
 				04AA96D11653955500E03320 /* PictrueDateViewController.xib in Resources */,
 				04AA96DB1653BB5C00E03320 /* PictureListViewController.xib in Resources */,
 				B70426AC1AB6A939000A8437 /* scan_line.png in Resources */,
+				C720E51A1AC189EB00A7E1F4 /* RegisterViewController.xib in Resources */,
 				04BAB31E1654956C005B09A5 /* PictureShowViewController.xib in Resources */,
 				B70426A31AB6A939000A8437 /* scan_coremark02.png in Resources */,
 				B726AB8718FBCA0800A0CDAB /* cbx_on.png in Resources */,
 				04C0EA8416571F1D00FD88D8 /* picture30.png in Resources */,
 				04C0EA87165721D100FD88D8 /* record30.png in Resources */,
 				B726AB9118FBDA6A00A0CDAB /* gpio_open.png in Resources */,
+				C720E4F31AC188F800A7E1F4 /* ChangePasswordViewController.xib in Resources */,
 				04C0EACA165A13D000FD88D8 /* ipc30.png in Resources */,
 				04C0EADE165B09B000FD88D8 /* RecordDateViewController.xib in Resources */,
 				B7FF0BAD1939AF4A0011FD25 /* pdown.png in Resources */,
@@ -1833,8 +2012,10 @@
 				04C0EB15165B346100FD88D8 /* PlaybackViewController.xib in Resources */,
 				04C0EB1C165BA42D00FD88D8 /* PicDirCell.xib in Resources */,
 				04F1BC1B165CB5FA00458C9E /* picbk.png in Resources */,
+				C720E5011AC188F800A7E1F4 /* logo.png in Resources */,
 				04BC3F7A165DAC5F00B7E832 /* play_video.png in Resources */,
 				04BC3F7B165DAC5F00B7E832 /* videobk.png in Resources */,
+				C720E5241AC189FF00A7E1F4 /* name.png in Resources */,
 				04BA966A165E047300B60006 /* RecListCell.xib in Resources */,
 				B73BE31B19C3D6180090756E /* DateTimeTwoLabelCell_ipad.xib in Resources */,
 				04BA966C165E1CF300B60006 /* del_hook.png in Resources */,
@@ -1847,6 +2028,7 @@
 				B70426AF1AB6A939000A8437 /* topbar_icon_light_off.png in Resources */,
 				B766513119CBD4E900FCBED6 /* SDCardTwoLabelCell_ipad.xib in Resources */,
 				B7F3CF7C166064F5001A92E6 /* video_play_play_normal.png in Resources */,
+				C720E4F61AC188F800A7E1F4 /* ForgotPasswordViewController.xib in Resources */,
 				B7FD7BE818B34B4000CFFC0D /* about_back.png in Resources */,
 				B7F3CF7D166064F5001A92E6 /* video_play_play_pressed.png in Resources */,
 				B714817C1664A3E700085781 /* record.png in Resources */,
@@ -1894,9 +2076,12 @@
 				B795D19F17507914006B0481 /* StartView_Ipad.xib in Resources */,
 				B7F0CB6D175EC6F0006085E4 /* microphone.png in Resources */,
 				B70426A01AB6A939000A8437 /* scan_coremark01.png in Resources */,
+				C720E5251AC189FF00A7E1F4 /* password.png in Resources */,
 				B70426AE1AB6A939000A8437 /* scan_line@3x.png in Resources */,
 				B7F0CB6E175EC6F0006085E4 /* microphoneselected.png in Resources */,
 				B7F0CB7E175F3162006085E4 /* MoreViewController.xib in Resources */,
+				C720E4FC1AC188F800A7E1F4 /* InAppAlertView_iPad.xib in Resources */,
+				C720E4F41AC188F800A7E1F4 /* ChangePasswordViewController_iPad.xib in Resources */,
 				B7FF0BB01939AF4A0011FD25 /* pup.png in Resources */,
 				B7F0CB83175F317E006085E4 /* morelistcell.xib in Resources */,
 				B7D2AE98176022CF004AD177 /* pull.png in Resources */,
@@ -1911,6 +2096,7 @@
 				B7E1816B19767995003D0CCC /* bottom_ipad.png in Resources */,
 				B78DC6751764253D003F52E8 /* UserSettingViewController_Ipad.xib in Resources */,
 				B78DC67717642DA6003F52E8 /* UserSettingViewController.xib in Resources */,
+				C720E52C1AC18A4D00A7E1F4 /* SubscriptionViewController_iPad.xib in Resources */,
 				B7E78077176FF3DA00914F4B /* PicListIpadCell.xib in Resources */,
 				B70426BF1AB6A939000A8437 /* zbar-help.html in Resources */,
 				B7E7807E17705DAF00914F4B /* action.png in Resources */,
@@ -1926,6 +2112,7 @@
 				B73A84F117BB267500201B70 /* SDCardTwoLabelCell.xib in Resources */,
 				B7C7DCC81A0C5BAD007A7227 /* start.png in Resources */,
 				B73A84FB17BB2D9C00201B70 /* DateTimeTwoLabelCell.xib in Resources */,
+				C720E5231AC189FF00A7E1F4 /* mobile.png in Resources */,
 				B73BE32119C3D6180090756E /* CameraInfoCell_ipad.xib in Resources */,
 				B75D59CB192B58C40048A848 /* btnedit.png in Resources */,
 				B7173FDC17C4661C0091F248 /* VideoTableViewCell.xib in Resources */,
@@ -1934,6 +2121,7 @@
 				B70426A81AB6A939000A8437 /* scan_coremark03@3x.png in Resources */,
 				B7EF64671A13605C00CC0BAC /* icon-152.png in Resources */,
 				B7F00C341803B87200D2B608 /* moreviewback.png in Resources */,
+				C720E5221AC189FF00A7E1F4 /* email.png in Resources */,
 				B7FA873C18CB4512005E3C2D /* zoomadd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1951,7 +2139,9 @@
 				CC91860E1545203F001D459B /* StartViewController.mm in Sources */,
 				CC9186111545204A001D459B /* PlayViewController.mm in Sources */,
 				B7FD5BF0195AA64D004B4981 /* KXStatusBar.m in Sources */,
+				C720E4F51AC188F800A7E1F4 /* ForgotPasswordViewController.m in Sources */,
 				CC9186191545210F001D459B /* CameraViewController.mm in Sources */,
+				C720E5261AC189FF00A7E1F4 /* RequestClass.m in Sources */,
 				CC91861F15452136001D459B /* CameraEditViewController.mm in Sources */,
 				CCB227C11546434A0003AE49 /* CameraListCell.mm in Sources */,
 				B75D59C1192B57B60048A848 /* KavenZoomImageView.m in Sources */,
@@ -1976,10 +2166,12 @@
 				B75D59CE192B59390048A848 /* KavenToast.m in Sources */,
 				B70426C41AB6C5D2000A8437 /* FourViewController.m in Sources */,
 				04C66DB81622C422006E25E2 /* CgiPacket.cpp in Sources */,
+				C720E4FE1AC188F800A7E1F4 /* LoginViewController.m in Sources */,
 				04F5DB061623DAB500474C90 /* WifiPwdViewController.m in Sources */,
 				04F5DB3F1623F83300474C90 /* WifiPwdCell.m in Sources */,
 				B7356EA118DBEE5A00E4A49B /* RecordAudioRecorder.mm in Sources */,
 				04B40306162D5E5D00A2F05D /* AboutCell.m in Sources */,
+				C720E4F21AC188F800A7E1F4 /* ChangePasswordViewController.m in Sources */,
 				04B4030B162E680900A2F05D /* MyTabBarViewController.m in Sources */,
 				040AD24E162EDE64007B5E19 /* CustomToast.m in Sources */,
 				047869011637D63F00E7FC9A /* UserPwdSetViewController.m in Sources */,
@@ -1995,6 +2187,7 @@
 				04B9B182163A86EB00349F4E /* oDropListCell.m in Sources */,
 				04CFD0C91651CD6700CBC907 /* AddCameraCell.m in Sources */,
 				04CFD0CF1651FB2600CBC907 /* CameraSearchViewController.m in Sources */,
+				C720E52D1AC18A4D00A7E1F4 /* SubscriptionViewController.m in Sources */,
 				B72FE256195D987B001B5DC1 /* KXDialog.m in Sources */,
 				04FE57831652360400D48E04 /* PictureViewController.m in Sources */,
 				04FE57881652362100D48E04 /* RecordViewController.m in Sources */,
@@ -2009,6 +2202,7 @@
 				04BAB31D1654956C005B09A5 /* PictureShowViewController.m in Sources */,
 				04C0EAC31659CA1E00FD88D8 /* CustomAVRecorder.mm in Sources */,
 				04C0EAD6165A2D3A00FD88D8 /* RecPathDBUtils.mm in Sources */,
+				C720E4FA1AC188F800A7E1F4 /* InAppAlertView.m in Sources */,
 				B7474C7119C2CC54008B5AE9 /* AlarmViewController.m in Sources */,
 				04C0EAD9165A32DF00FD88D8 /* RecPathManagement.m in Sources */,
 				B70426B91AB6A939000A8437 /* qrinput.c in Sources */,
@@ -2025,6 +2219,7 @@
 				04C0EB1F165BA4B500FD88D8 /* PicDirCell.m in Sources */,
 				B75220FC1A00DB4B009284F9 /* AviManagement.mm in Sources */,
 				04BA9667165E046300B60006 /* RecListCell.m in Sources */,
+				C720E5161AC189B700A7E1F4 /* RegisterViewController.m in Sources */,
 				B70426571AB6A8B6000A8437 /* ScanViewController.m in Sources */,
 				B7CD90DC1670A443005FE4FA /* MyGLViewController.mm in Sources */,
 				B71DA1F21929B09E003B1AE0 /* RecordBean.m in Sources */,
@@ -2045,6 +2240,7 @@
 				B714638919275336001A746F /* VideoPicView.m in Sources */,
 				B741D469170BD62C009E7777 /* ServerCell.m in Sources */,
 				B77669C919E790630037D50A /* PPPPChannel.mm in Sources */,
+				C720E4FD1AC188F800A7E1F4 /* IAPHelper.m in Sources */,
 				B70802021739F9AF00EFF9A3 /* MySetDialog.m in Sources */,
 				B7105DD6196245EB00D74C49 /* mytoast.m in Sources */,
 				B70802031739F9AF00EFF9A3 /* PresetDialog.m in Sources */,
@@ -2120,8 +2316,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Raymond Spolaric (6A5R5VT34K)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Raymond Spolaric (6A5R5VT34K)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
@@ -2142,8 +2338,8 @@
 					"$(PROJECT_DIR)/Classes/ScanBarCode/ZBarSDK",
 				);
 				PRODUCT_NAME = P2PCamera;
-				PROVISIONING_PROFILE = "e8117217-bac2-41b9-b05b-544d2f0ebeee";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e8117217-bac2-41b9-b05b-544d2f0ebeee";
+				PROVISIONING_PROFILE = "66288f30-ad1b-46cd-9002-9b9062837378";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "66288f30-ad1b-46cd-9002-9b9062837378";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2154,8 +2350,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Raymond Spolaric (6A5R5VT34K)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Raymond Spolaric (6A5R5VT34K)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
@@ -2178,8 +2374,8 @@
 				);
 				OTHER_CFLAGS = "";
 				PRODUCT_NAME = P2PCamera;
-				PROVISIONING_PROFILE = "e8117217-bac2-41b9-b05b-544d2f0ebeee";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e8117217-bac2-41b9-b05b-544d2f0ebeee";
+				PROVISIONING_PROFILE = "66288f30-ad1b-46cd-9002-9b9062837378";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "66288f30-ad1b-46cd-9002-9b9062837378";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2190,8 +2386,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Raymond Spolaric (6A5R5VT34K)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Raymond Spolaric (6A5R5VT34K)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_DYNAMIC_NO_PIC = YES;
 				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
@@ -2212,8 +2408,8 @@
 					"$(PROJECT_DIR)/Classes/ScanBarCode/ZBarSDK",
 				);
 				PRODUCT_NAME = P2PCamera;
-				PROVISIONING_PROFILE = "e8117217-bac2-41b9-b05b-544d2f0ebeee";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "e8117217-bac2-41b9-b05b-544d2f0ebeee";
+				PROVISIONING_PROFILE = "66288f30-ad1b-46cd-9002-9b9062837378";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "66288f30-ad1b-46cd-9002-9b9062837378";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

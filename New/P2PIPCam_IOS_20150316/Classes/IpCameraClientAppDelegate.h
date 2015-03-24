@@ -28,6 +28,13 @@
 #import "Reachability.h"
 #import "KXNavViewController.h"
 #import "KXPlayViewController.h"
+
+// Code Begin
+#import "LoginViewController.h"
+// Code Ends
+
+
+
 #define TITLE_WITH  120
 
 @interface IpCameraClientAppDelegate : NSObject <UIApplicationDelegate> {
@@ -61,6 +68,11 @@
     
     NetworkStatus netStatus;
     BOOL isFirstStartApp;
+    
+    // Code Begin
+    LoginViewController *loginViewCntrl;
+     UINavigationController *nav;
+    // Code Ends
 }
 
 @property (nonatomic,assign) id<MoreViewPlayProtocol> moreViewPlayProtocol;

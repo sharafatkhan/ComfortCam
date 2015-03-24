@@ -227,13 +227,16 @@ void UncaughtExceptionHandler(NSException *exception)
     {
         if (strUserName != nil && strUserPassword != nil)
         {
-            if ([[NSUserDefaults standardUserDefaults] boolForKey:@"rememberME"] == YES) {
+            if ([[NSUserDefaults standardUserDefaults] boolForKey:@"rememberME"] == YES)
+            {
                 [self performSelectorOnMainThread:@selector(switchView:) withObject:nil waitUntilDone:NO];
-            }else
+            }
+            else
             {
                 [self performSelectorOnMainThread:@selector(addLoginView) withObject:nil waitUntilDone:NO];
             }
-        } else
+        }
+        else
         {
             [self performSelectorOnMainThread:@selector(addLoginView) withObject:nil waitUntilDone:NO];
         }
