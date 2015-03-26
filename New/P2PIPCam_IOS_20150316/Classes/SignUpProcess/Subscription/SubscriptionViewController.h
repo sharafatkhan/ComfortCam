@@ -15,6 +15,7 @@
 
 -(IBAction) tapOnMonthSubscription:(id) sender;
 -(IBAction) tapOnYearSubscription:(id) sender;
+@property (retain, nonatomic) IBOutlet UIView *bgViewStatusBar;
 
 
 @end

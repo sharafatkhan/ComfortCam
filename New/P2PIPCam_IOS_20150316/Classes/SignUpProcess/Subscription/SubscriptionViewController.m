@@ -17,6 +17,8 @@
 {
     IAPHelper *objInApp;
     NSString *strSubscriptionType;
+    BOOL isIOS7;
+
 }
 @property (nonatomic, retain) RequestClass *connection;
 @end
@@ -118,6 +120,28 @@
     imgView.center=self.view.center;
     self.view.backgroundColor= [UIColor colorWithPatternImage:imgView.image];
     [imgView release];
+    
+    if ([IpCameraClientAppDelegate isIOS7Version]) {
+        NSLog(@"is ios7");
+        self.wantsFullScreenLayout = YES;
+        [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackOpaque];
+        
+        CGRect navigationBarFrame = self.navigationBar.frame;
+        navigationBarFrame.origin.y += 20;
+        self.navigationBar.frame = navigationBarFrame;
+        [self.view bringSubviewToFront:self.navigationBar];
+        
+//        CGRect tableFrm=cameraList.frame;
+//        tableFrm.origin.y+=20;
+//        cameraList.frame=tableFrm;
+//        self.view.backgroundColor=[UIColor blackColor];
+        isIOS7=YES;
+//        cameraList.contentInset=UIEdgeInsetsMake(-30, 0, 0, 0);
+        
+    }else{
+        self.bgViewStatusBar.hidden = YES;
+        isIOS7=NO;
+    }
 
     // Do any additional setup after loading the view from its nib.
 }
@@ -143,11 +167,13 @@
 - (void)dealloc {
     [_navigationBar release];
     [_scrlView release];
+    [_bgViewStatusBar release];
     [super dealloc];
 }
 - (void)viewDidUnload {
     [self setNavigationBar:nil];
     [self setScrlView:nil];
+    [self setBgViewStatusBar:nil];
     [super viewDidUnload];
 }
 
