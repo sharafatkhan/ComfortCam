@@ -11,11 +11,28 @@
 #import "CameraInfoCell.h"
 #import "IpCameraClientAppDelegate.h"
 #import "mytoast.h"
+
+// Code Begin
+#import "RequestClass.h"
+
+#define OperatorRequest 1
+#define VisitorRequest  2
+// Code Ends
+
 static const double PageViewControllerTextAnimationDuration = 0.33;
 
-@interface UserPwdSetViewController ()
+    //  Code Begins
+@interface UserPwdSetViewController ()<RequestClassDelegate>
+{
 
+    int requestType;
+    BOOL isOperatorChanged, isVisitorChanged;
+    BOOL isOkToPopHome;
+
+}
+@property (nonatomic, retain) RequestClass *connection;
 @end
+    //  Code Ends
 
 @implementation UserPwdSetViewController
 
@@ -167,10 +184,61 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
     NSDictionary *dic=[NSDictionary dictionaryWithObjectsAndKeys:m_strDID,@"did",m_strName,@"name",m_strUser,@"user",m_strPwd,@"pwd", nil];
     [delegate addDeviceToBizServer:dic];
     
-    
-    [self.navigationController popToRootViewControllerAnimated:YES];
-   
+
+    //  Code Begins
+    [self setOperatorAndVisitor];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
+    //  Code Ends
 }
+
+//  Code Begins
+-(void) setOperatorAndVisitor
+{
+    isOkToPopHome = YES;  // Means it is not Ok to pop untill response received
+    if (isOperatorChanged)
+    {
+        NSString *strUserName = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserName"];
+        
+        NSMutableDictionary *param = [NSMutableDictionary dictionary];
+        [param setValue:@"CAMERA_ACCESS_ADD" forKey:@"action"];
+        [param setValue:strUserName forKey:@"email"];
+        
+        [param setValue:self.m_user2 forKey:@"access_userid"];
+        [param setValue:self.m_pwd2 forKey:@"password"]; //camera_id
+        
+        [param setValue:self.m_strDID forKey:@"camera_id"];
+        [param setValue:@1 forKey:@"access_type"]; // Operator
+        
+        [self.connection makePostRequestFromDictionary:param];
+        requestType = OperatorRequest;
+    }
+    else if (isVisitorChanged)
+    {
+        NSString *strUserName = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserName"];
+        
+        NSMutableDictionary *param = [NSMutableDictionary dictionary];
+        [param setValue:@"CAMERA_ACCESS_ADD" forKey:@"action"];
+        [param setValue:strUserName forKey:@"email"];
+        
+        [param setValue:self.m_user1 forKey:@"access_userid"];
+        [param setValue:self.m_pwd1 forKey:@"password"]; //camera_id
+        
+        [param setValue:self.m_strDID forKey:@"camera_id"];
+        [param setValue:@0 forKey:@"access_type"]; // Operator
+        
+        [self.connection makePostRequestFromDictionary:param];
+        requestType = VisitorRequest;
+    }
+    else
+    {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
+    
+    
+}
+
+//  Code Ends
+
 
 - (void)viewDidLoad
 {
@@ -806,6 +874,8 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
     return YES;
 }
 
+//  Code Begins
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
 	//NSLog(@"textFieldDidEndEditing");
@@ -818,21 +888,27 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
             self.m_strPwd = textField.text;
             break;
         case 2:
+            isOperatorChanged = YES;
             self.m_user2=textField.text;
             break;
         case 3:
+            isOperatorChanged = YES;
             self.m_pwd2=textField.text;
             break;
         case 4:
+            isVisitorChanged = YES;
             self.m_user1=textField.text;
             break;
         case 5:
+            isVisitorChanged = YES;
             self.m_pwd1=textField.text;
             break;
         default:
             break;
     }
 }
+
+//  Code Ends
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {    
@@ -882,5 +958,86 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
     [self.navigationController popViewControllerAnimated:YES];
     return NO;
 }
+
+//  Code Begins
+
+
+
+#pragma mark -  Request Delegate
+
+- (void)connectionSuccess:(id)result andError:(NSError *)error
+{
+    isOkToPopHome = NO; // Yes it is ok to pop to home
+    if (!error)
+    {
+        switch (requestType)
+        {
+            case OperatorRequest:
+            {
+                isOperatorChanged = NO;
+                if ([result isKindOfClass:[NSDictionary class]])
+                {
+                    NSDictionary *responseDict = (NSDictionary *) result;
+                    if ([[responseDict valueForKey:@"code"] integerValue] == 200 && [[responseDict valueForKey:@"status"] isEqualToString:@"OK"])
+                    {
+                        
+                        if (isVisitorChanged)
+                        {
+                            NSString *strUserName = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserName"];
+                            
+                            NSMutableDictionary *param = [NSMutableDictionary dictionary];
+                            [param setValue:@"CAMERA_ACCESS_ADD" forKey:@"action"];
+                            [param setValue:strUserName forKey:@"email"];
+                            
+                            [param setValue:self.m_user1 forKey:@"access_userid"];
+                            [param setValue:self.m_pwd1 forKey:@"password"]; //camera_id
+                            
+                            [param setValue:self.m_strDID forKey:@"camera_id"];
+                            [param setValue:@0 forKey:@"access_type"]; // Operator
+                            
+                            isOkToPopHome = YES;
+                            [self.connection makePostRequestFromDictionary:param];
+                            requestType = VisitorRequest;
+                        }
+                        else
+                        {
+                            NSLog(@"Visitor Changed successfully");
+                            [self.navigationController popToRootViewControllerAnimated:YES];
+                        }
+                        
+                        
+                    }
+                }
+            }
+                break;
+            case VisitorRequest:
+                isVisitorChanged = NO;
+                if ([result isKindOfClass:[NSDictionary class]])
+                {
+                    NSDictionary *responseDict = (NSDictionary *) result;
+                    if ([[responseDict valueForKey:@"code"] integerValue] == 200 && [[responseDict valueForKey:@"status"] isEqualToString:@"OK"])
+                    {
+                        [self.navigationController popToRootViewControllerAnimated:YES];
+                    }
+                }
+                break;
+                
+            default:
+                break;
+        }
+    }
+    else
+    {
+        isOperatorChanged = NO;
+        isVisitorChanged = NO;
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+        [alert release];
+    }
+    
+}
+
+
+//  Code Ends
 
 @end

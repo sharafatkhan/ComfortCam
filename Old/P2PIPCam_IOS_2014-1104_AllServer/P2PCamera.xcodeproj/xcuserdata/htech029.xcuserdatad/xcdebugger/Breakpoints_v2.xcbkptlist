@@ -479,7 +479,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1915"
             endingLineNumber = "1915"
-            landmarkName = "-connectionSuccess:andError:"
+            landmarkName = "-playViewExitResultImg:DID:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -511,7 +511,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1395"
             endingLineNumber = "1395"
-            landmarkName = "-showSetDialog:"
+            landmarkName = "-checkUserResult:Port:User:Pwd:Result:Type:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -893,7 +893,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1934"
             endingLineNumber = "1934"
-            landmarkName = "-connectionSuccess:andError:"
+            landmarkName = "-moreViewExit"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1175,7 +1175,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1932"
             endingLineNumber = "1932"
-            landmarkName = "-connectionSuccess:andError:"
+            landmarkName = "-moreViewExit"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

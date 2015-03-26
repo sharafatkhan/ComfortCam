@@ -62,6 +62,12 @@
     NSMutableArray *locakDeviceArr;
     
     BOOL isSearchDevice;
+    
+    // Code Begin
+    NSInteger cameraIndex;
+    int requestType;
+    BOOL isUserLoggedIn;
+    // Code Ends
 }
 @property (nonatomic,copy)NSString *appStoreVersion;
 @property (nonatomic,assign)NetWorkUtiles *netWorkUtile;
@@ -93,5 +99,9 @@
 -(void)reStartThread;
 
 -(void)networkChangeReStartDevice;
+
+// Code Begin
+- (IBAction)tapOnInAppAlert:(id)sender;
+// Code Ends
 
 @end

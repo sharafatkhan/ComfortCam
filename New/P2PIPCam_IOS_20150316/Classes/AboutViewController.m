@@ -14,6 +14,11 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
 #import "ServerCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "mytoast.h"
+
+// Code Begin
+#import "SubscriptionViewController.h"
+// Code Ends
+
 @interface AboutViewController ()
 
 @end
@@ -164,14 +169,17 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)aTableView
 {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section
 {
-    if (section==0) {
+    if (section==0)
+    {
         return 2;
-    }else {
+    }
+    else
+    {
         return 1;
     }
     
@@ -189,7 +197,8 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
     
     UITableViewCell *cell1=nil;
      CGRect frame;
-    if (anIndexPath.section==0) {
+    if (anIndexPath.section==0)
+    {
         NSString *cellIdentifier = @"AboutCell";
         
         AboutCell *cell =  (AboutCell*)[aTableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -234,7 +243,9 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
         }
         
         cell1= cell;
-    }else{
+    }
+    else if (anIndexPath.section==1)
+    {
 
         NSString *identifer=@"cell2";
         UITableViewCell *cell=[aTableView dequeueReusableCellWithIdentifier:identifer];
@@ -256,6 +267,59 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
         
         cell1=cell;
     }
+    //  Code Begins
+    else
+    {
+        NSString *cellIdentifier = @"AboutCell";
+        
+        AboutCell *cell =  (AboutCell*)[aTableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        if (cell == nil)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"AboutCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        cell.labelItem.hidden = YES;
+        cell.labelVersion.hidden = YES;
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        frame=cell.frame;
+        
+        
+        
+        
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button addTarget:self
+                   action:@selector(aMethod:)
+         forControlEvents:UIControlEventTouchUpInside];
+        button.backgroundColor = [UIColor redColor];
+        [button setTitle:@"Log out" forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:@"imgButton.png"] forState:UIControlStateNormal];
+        
+        CGPoint center = self.view.center;
+        
+        button.frame = CGRectMake(center.x - 145, 3.0, 130.0, 35.0);
+        button.tag = 1;
+        [cell addSubview:button];
+        
+        UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
+        [button2 addTarget:self
+                    action:@selector(aMethod:)
+         
+          forControlEvents:UIControlEventTouchUpInside];
+        button2.backgroundColor = [UIColor redColor];
+        [button2 setTitle:@"Subscription" forState:UIControlStateNormal];
+        [button2 setBackgroundImage:[UIImage imageNamed:@"imgButton.png"] forState:UIControlStateNormal];
+        button2.frame = CGRectMake(center.x + 15, 3.0, 130.0, 35.0);
+        button2.tag = 2;
+        [cell addSubview:button2];
+        
+        
+        
+        cell1=cell;
+    }
+    //  Code Ends
     
     float cellHeight = cell1.frame.size.height;
     
@@ -274,6 +338,49 @@ static const double PageViewControllerTextAnimationDuration = 0.33;
     
     return  cell1;
 }
+
+//  Code Begins
+
+
+-(IBAction)aMethod:(id)sender
+{
+    UIButton *btn = (UIButton *) sender;
+    if (btn.tag == 1)
+    {
+        NSLog(@"log out");
+        
+        self.tabBarController.selectedIndex = 0;
+        [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"isLoggedIN"];
+        
+        
+        
+        [[IpCameraClientAppDelegate sharedAppDelegate] addLoginView];
+        
+    }
+    else
+    {
+        NSLog(@"subscribe");
+        
+        if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPhone) {
+            SubscriptionViewController *rvc = [[SubscriptionViewController alloc] initWithNibName:@"SubscriptionViewController" bundle:nil];
+            [self presentViewController:rvc animated:YES completion:nil];
+            //        [self.navigationController pushViewController:rvc animated:YES];
+            
+        }
+        else
+        {
+            SubscriptionViewController *rvc = [[SubscriptionViewController alloc] initWithNibName:@"SubscriptionViewController_iPad" bundle:nil];
+            [self presentViewController:rvc animated:YES completion:nil];
+            //        [self.navigationController pushViewController:rvc animated:YES];
+        }
+        
+    }
+    
+    
+}
+
+//  Code Ends
+
 -(void)alarmNotifyChange:(id)sender{
     NSLog(@"alarmNotifyChange....");
     UISwitch *sw=(UISwitch*)sender;

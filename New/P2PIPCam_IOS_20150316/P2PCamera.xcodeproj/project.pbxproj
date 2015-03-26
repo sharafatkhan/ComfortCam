@@ -364,6 +364,8 @@
 		C720E53A1AC1A7BE00A7E1F4 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E5371AC1A7BE00A7E1F4 /* check.png */; };
 		C720E53B1AC1A7BE00A7E1F4 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E5381AC1A7BE00A7E1F4 /* check@2x.png */; };
 		C720E53C1AC1A7BE00A7E1F4 /* check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C720E5391AC1A7BE00A7E1F4 /* check@3x.png */; };
+		C78CDFB51AC3C1A500741CD4 /* 9.99 Button.png in Resources */ = {isa = PBXBuildFile; fileRef = C78CDFB31AC3C1A500741CD4 /* 9.99 Button.png */; };
+		C78CDFB61AC3C1A500741CD4 /* 99 year buttone.png in Resources */ = {isa = PBXBuildFile; fileRef = C78CDFB41AC3C1A500741CD4 /* 99 year buttone.png */; };
 		CC31F0201547E2CD000FE8BD /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CC31F01F1547E2CD000FE8BD /* libsqlite3.dylib */; };
 		CC85610C155130F000C15A0C /* IpCameraClient.strings in Resources */ = {isa = PBXBuildFile; fileRef = CC85610B155130F000C15A0C /* IpCameraClient.strings */; };
 		CC87C459154924E60086B180 /* SearchListCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = CC87C458154924E60086B180 /* SearchListCell.mm */; };
@@ -923,6 +925,8 @@
 		C720E5371AC1A7BE00A7E1F4 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 		C720E5381AC1A7BE00A7E1F4 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
 		C720E5391AC1A7BE00A7E1F4 /* check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@3x.png"; sourceTree = "<group>"; };
+		C78CDFB31AC3C1A500741CD4 /* 9.99 Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "9.99 Button.png"; sourceTree = "<group>"; };
+		C78CDFB41AC3C1A500741CD4 /* 99 year buttone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "99 year buttone.png"; sourceTree = "<group>"; };
 		CC31F01F1547E2CD000FE8BD /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CC31F0651547EF18000FE8BD /* DBSelectResultProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBSelectResultProtocol.h; sourceTree = "<group>"; };
 		CC85610215512FF100C15A0C /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/IpCameraClient.strings; sourceTree = "<group>"; };
@@ -1856,6 +1860,8 @@
 		C720E5271AC18A3000A7E1F4 /* Subscription */ = {
 			isa = PBXGroup;
 			children = (
+				C78CDFB31AC3C1A500741CD4 /* 9.99 Button.png */,
+				C78CDFB41AC3C1A500741CD4 /* 99 year buttone.png */,
 				C720E5281AC18A4D00A7E1F4 /* SubscriptionViewController_iPad.xib */,
 				C720E5291AC18A4D00A7E1F4 /* SubscriptionViewController.h */,
 				C720E52A1AC18A4D00A7E1F4 /* SubscriptionViewController.m */,
@@ -1986,6 +1992,7 @@
 				C720E5191AC189EB00A7E1F4 /* RegisterViewController_iPad.xib in Resources */,
 				B7FF0BA41939AE6C0011FD25 /* btn_back_pressed.png in Resources */,
 				B7FF0BB21939BB970011FD25 /* playalarm.png in Resources */,
+				C78CDFB51AC3C1A500741CD4 /* 9.99 Button.png in Resources */,
 				04B40301162D2B1000A2F05D /* about.png in Resources */,
 				B7FF0BBB1939C7760011FD25 /* playup.png in Resources */,
 				B7E1816A19767995003D0CCC /* bottom.png in Resources */,
@@ -2090,6 +2097,7 @@
 				B70FE3FE174226D10027787E /* add_twobar.png in Resources */,
 				B75D59C9192B58C40048A848 /* btnalbum.png in Resources */,
 				B70FE3FF174226D10027787E /* adddevice.png in Resources */,
+				C78CDFB61AC3C1A500741CD4 /* 99 year buttone.png in Resources */,
 				B762B1EB18FCC1B600817EAB /* brightness.png in Resources */,
 				B70FE400174226D10027787E /* addname.png in Resources */,
 				B70FE401174226D10027787E /* addpassword.png in Resources */,

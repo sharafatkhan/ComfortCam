@@ -20,6 +20,29 @@
 #import "MoreViewController.h"
 #import "KGStatusBar.h"
 #import "FourViewController.h"
+
+// Code Begin
+
+
+#import "RequestClass.h"
+#import "SubscriptionViewController.h"
+#import "InAppAlertView.h"
+
+#define loginRequest 1
+#define cameraAccessRequest 2
+
+@interface CameraViewController()<RequestClassDelegate>
+{
+    NSInteger isUserSubscribed;
+    InAppAlertView *objInAppAlertView;
+    NSInteger subscriptonStatus;
+}
+@property (nonatomic, retain) RequestClass *connection;
+
+@end
+
+// Code Ends
+
 @implementation CameraViewController
 
 @synthesize cameraList;
@@ -747,6 +770,11 @@
     
     int index = anIndexPath.row;
     
+    //  Code Begins
+    cameraIndex = anIndexPath.row;
+    //  Code Ends
+
+    
     if (isP2P) {
         NSDictionary *cameraDic = [cameraListMgt GetCameraAtIndex:index];
         if (cameraDic == nil) {
@@ -773,9 +801,57 @@
         
     }
     
-    [self StartPlayView:index];
+    //  Code Begins
+    
+    NSDictionary *cameraDic = [cameraListMgt GetCameraAtIndex:cameraIndex];
+    NSNumber *nPPPPStatus = [cameraDic objectForKey:@STR_PPPP_STATUS];
+    
+    if (!isUserLoggedIn)
+    {
+        [self validateUser];
+    }
+    else if ([[NSUserDefaults standardUserDefaults] integerForKey:@"isUserSubscribed"] == 0 && [nPPPPStatus intValue] == PPPP_STATUS_WLAN)
+    {
+        NSDictionary *cameraDic = [cameraListMgt GetCameraAtIndex:cameraIndex];
+        
+        NSString *strCameraUser = [cameraDic valueForKey:@"user"];
+        NSString *strCameraUserPassword = [cameraDic valueForKey:@"pwd"];
+        
+        NSString *cameraId = [cameraDic valueForKey:@"did"];
+        
+        NSMutableDictionary *param = [NSMutableDictionary dictionary];
+        [param setValue:@"GET_CAMERA_ACCESS" forKey:@"action"];
+        [param setValue:strCameraUser forKey:@"access_userid"];
+        [param setValue:strCameraUserPassword forKey:@"password"];
+        [param setValue:cameraId forKey:@"camera_id"];
+        
+        [self.connection makePostRequestFromDictionary:param];
+        requestType = cameraAccessRequest;
+    }
+    else
+    {
+        [self StartPlayView:cameraIndex];
+    }
+    //  Code Ends
     
 }
+
+// Code Begin
+
+
+-(void) validateUser
+{
+    NSString *strUserName = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserName"];
+    NSString *strUserPassword = [[NSUserDefaults standardUserDefaults] valueForKey:@"UserPassword"];
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    [param setValue:@"LOGIN" forKey:@"action"];
+    [param setValue:strUserName forKey:@"email"];
+    [param setValue:strUserPassword forKey:@"password"];
+    [self.connection makePostRequestFromDictionary:param];
+    requestType = loginRequest;
+}
+// Code Ends
 
 #pragma mark -
 #pragma mark system
@@ -1812,4 +1888,168 @@
         pPPPPChannelMgt->SetStatusDelegate((char*)[strDID UTF8String], self);
     }
 }
+
+//  Code Begins
+
+
+
+#pragma mark -  Request Delegate
+
+- (void)connectionSuccess:(id)result andError:(NSError *)error
+{
+    if (!error)
+    {
+        switch (requestType)
+        {
+            case loginRequest:
+            {
+                isUserLoggedIn = YES;
+                if ([result isKindOfClass:[NSDictionary class]])
+                {
+                    NSDictionary *dictResponse = [result valueForKey:@"response"];
+                    NSInteger isSubscribed = [[dictResponse valueForKey:@"isSubscribed"] intValue];
+                    
+                    subscriptonStatus = [[dictResponse valueForKey:@"subscription_status"] intValue];
+                    
+                    [[NSUserDefaults standardUserDefaults] setInteger:isSubscribed forKey:@"isUserSubscribed"];
+                    
+                    isUserSubscribed = [[NSUserDefaults standardUserDefaults] integerForKey:@"isUserSubscribed"];;
+                    
+                    if ([[result valueForKey:@"response"] isKindOfClass:[NSNull class]]) {
+                        NSString *str = [result valueForKey:@"response"];
+                        [[NSUserDefaults standardUserDefaults] setValue:str forKey:@"subscriptionEndDate"];
+                    }
+                    
+                    if (isSubscribed == 1)
+                    {
+                        [self StartPlayView:cameraIndex];
+                    }
+                    else
+                    {
+                        NSDictionary *cameraDic = [cameraListMgt GetCameraAtIndex:cameraIndex];
+                        
+                        NSNumber *nPPPPStatus = [cameraDic objectForKey:@STR_PPPP_STATUS];
+                        if (subscriptonStatus == 1001 && [nPPPPStatus intValue] == PPPP_STATUS_WLAN)
+                        {
+                            NSDictionary *cameraDic = [cameraListMgt GetCameraAtIndex:cameraIndex];
+                            
+                            NSString *strCameraUser = [cameraDic valueForKey:@"user"];
+                            NSString *strCameraUserPassword = [cameraDic valueForKey:@"pwd"];
+                            
+                            NSString *cameraId = [cameraDic valueForKey:@"did"];
+                            
+                            NSMutableDictionary *param = [NSMutableDictionary dictionary];
+                            [param setValue:@"GET_CAMERA_ACCESS" forKey:@"action"];
+                            [param setValue:strCameraUser forKey:@"access_userid"];
+                            [param setValue:strCameraUserPassword forKey:@"password"];
+                            [param setValue:cameraId forKey:@"camera_id"];
+                            
+                            [self.connection makePostRequestFromDictionary:param];
+                            requestType = cameraAccessRequest;
+                        }
+                        else
+                        {
+                            [self StartPlayView:cameraIndex];
+                        }
+                    }
+                }
+            }
+                break;
+                
+            case cameraAccessRequest:
+            {
+                if ([result isKindOfClass:[NSDictionary class]])
+                {
+                    NSDictionary *dictResponse = (NSDictionary *)result;
+                    if ([[dictResponse valueForKey:@"code"] intValue] == 200)
+                    {
+                        if ([[dictResponse valueForKey:@"response"] intValue] == 1)
+                        {
+                            [self StartPlayView:cameraIndex];
+                        }
+                        else if ([[dictResponse valueForKey:@"response"] intValue] == 0)
+                        {
+                            // Show pop up
+                            // Goto subscription page
+                            NSLog(@"Goto subscription page");
+                            objInAppAlertView = (InAppAlertView *)[[[NSBundle mainBundle] loadNibNamed:@"InAppAlertView" owner:self options:nil] objectAtIndex:0];
+                            [self.view addSubview:objInAppAlertView];
+                            if (subscriptonStatus == 1003)
+                            {
+                                objInAppAlertView.lblSubscriptionMessage.text = @"Please renew your subscription";
+                            }
+                            objInAppAlertView.center = self.view.center;
+                        }
+                    }
+                }
+            }
+                break;
+            default:
+                break;
+        }
+        
+        
+        
+        //        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else
+    {
+        
+        objInAppAlertView = (InAppAlertView *)[[[NSBundle mainBundle] loadNibNamed:@"InAppAlertView" owner:self options:nil] objectAtIndex:0];
+        [self.view addSubview:objInAppAlertView];
+        
+        objInAppAlertView.center = self.view.center;
+        if (subscriptonStatus == 1003)
+        {
+            objInAppAlertView.lblSubscriptionMessage.text = @"Please renew your subscription";
+        }
+        //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        //        [alert show];
+        //        [alert release];
+    }
+}
+
+
+- (IBAction)tapOnInAppAlert:(id)sender
+{
+    if ([objInAppAlertView isDescendantOfView:self.view])
+    {
+        [objInAppAlertView removeFromSuperview];
+        objInAppAlertView = nil;
+    }
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPhone) {
+        SubscriptionViewController *rvc = [[SubscriptionViewController alloc] initWithNibName:@"SubscriptionViewController" bundle:nil];
+        [self presentViewController:rvc animated:YES completion:nil];
+        //        [self.navigationController pushViewController:rvc animated:YES];
+        
+    }
+    else
+    {
+        SubscriptionViewController *rvc = [[SubscriptionViewController alloc] initWithNibName:@"SubscriptionViewController_iPad" bundle:nil];
+        [self presentViewController:rvc animated:YES completion:nil];
+        //        [self.navigationController pushViewController:rvc animated:YES];
+    }
+}
+
+#pragma mark- In App Purchase Delegate -
+
+- (void)completePayment:(SKPaymentTransaction *)transaction
+{
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:kPRODUCT_PURCHASE];
+    //    [ProgressHUD dismiss];
+}
+- (void)restoredPayment:(SKPaymentTransaction *)transactions
+{
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:kPRODUCT_PURCHASE];
+    //    [ProgressHUD dismiss];
+}
+- (void)failedPayment:(SKPaymentTransaction *)transaction
+{
+    //    [ProgressHUD dismiss];
+}
+
+//  Code Ends
+
+
 @end

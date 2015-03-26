@@ -78,6 +78,12 @@
     UIImage *fourImg;
     BOOL isViewDisappear;
     
+    // Code Begin
+    NSInteger cameraIndex;
+    int requestType;
+    BOOL isUserLoggedIn;
+    // Code Ends
+    
     
 }
 
@@ -121,5 +127,8 @@
 @property (nonatomic, assign) CPPPPChannelManagement *pPPPPChannelMgt;
 @property (nonatomic, assign) id<MoreViewExitProtocol>moreViewExitDelegate;
 
+// Code Begin
+- (IBAction)tapOnInAppAlert:(id)sender;
+// Code Ends
 
 @end

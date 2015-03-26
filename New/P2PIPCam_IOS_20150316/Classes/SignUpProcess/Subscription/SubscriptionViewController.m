@@ -24,8 +24,13 @@
 @implementation SubscriptionViewController
 @synthesize connection;
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
+//    CGSize scrlContentSize = CGSize
+    self.scrlView.contentSize = CGSizeMake(self.scrlView.frame.size.width, 400.0);
+    
     self.connection = [[RequestClass alloc] init];
     self.connection.delegate = self;
     
@@ -137,10 +142,12 @@
 
 - (void)dealloc {
     [_navigationBar release];
+    [_scrlView release];
     [super dealloc];
 }
 - (void)viewDidUnload {
     [self setNavigationBar:nil];
+    [self setScrlView:nil];
     [super viewDidUnload];
 }
 
@@ -159,6 +166,7 @@
 }
 
 -(IBAction) tapOnYearSubscription:(id) sender
+
 {
     IpCameraClientAppDelegate *appDelegate = (IpCameraClientAppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate showLoadingView];
